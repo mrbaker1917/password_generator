@@ -36,13 +36,18 @@ def generate_password(length=8, nums=1, special_chars=1, uppercase=1, lowercase=
 
     return password
 
-
-if __name__ == "__main__":
-    print("Welcome to the password generator!")
+def inputter():
+    print("Welcome to the Password Generator!")
     length = int(input("Please enter the length the password you would like to create: "))
     nums = int(input("How many numbers would you like included in the password? "))
     special_chars = int(input("How many special characters would you like in the password? "))
-    upper_case = int(input("How many upper care letters would you like? "))
-    lower_case = int(input("How many lower case letters would you like? "))
+    upper_case = int(input("How many uppercase letters would you like? "))
+    lower_case = int(input("How many lowercase letters would you like? "))
+    if (nums+special_chars+upper_case+lower_case) > length:
+        print("Too many characters for length! Please make sure you do not request more characters than the total length.")
+        return
     new_password = generate_password(length, nums, special_chars, upper_case, lower_case)
-    print("Here is your new password: ", new_password)
+    print(f"Here is your new password: '{new_password}'")
+
+if __name__ == "__main__":
+    inputter()
