@@ -1,7 +1,11 @@
 # password_generator
 
 This password generator first asks the user for the parameters for the password; then it generates it. 
-Users will need to have python3 installed to run this.
 
-To run: make sure you are inside the directory/folder password_generator.
-Enter into the console: python3 main.py
+NB: Users will need to have python3 installed to run this.
+
+To run the password generator: 
+1. Make sure you are inside the directory or folder /password_generator.
+2. Enter into the console: python3 main.py
+3. Answer the questions
+4. Enjoy you new password
